@@ -6,13 +6,11 @@ const createSession = () => {
         .create({
             session: 'session-name'
         })
-        .then((client) => sendMessage(client, '51985580860', 'teste'))
+        .then((client) => sendMessage(client, '999999999', 'teste'))
         .catch((erro) => {
             console.log(erro);
         });
 }
-
-createSession()
 
 const sendMessage = async (client, number, message) => {
     const formatted = formatPhone(number)
@@ -25,3 +23,5 @@ const sendMessage = async (client, number, message) => {
             console.error('Error when sending: ', erro);
         });
 }
+
+module.exports = { createSession, sendMessage }
